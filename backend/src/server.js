@@ -1,13 +1,17 @@
 import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
+
 import listRoutes from './routes/lists.js';
 import cardRoutes from './routes/cards.js';
 
-dotenv.config();
+console.log("SERVER FILE LOADED");
+
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+console.log("ROUTES ABOUT TO LOAD");
+
 
 // Middleware
 app.use(cors());
